@@ -1,0 +1,21 @@
+#Creating own store: MMA store with gear
+
+CREATE TABLE MMA(id INTEGER PRIMARY KEY, NAME text, quantity INTEGER, price INTEGER);
+INSERT INTO mma VALUES(1, "8ozGloves", 10,  30);
+INSERT INTO mma VALUES(2, "12ozGloves", 10, 35);
+INSERT INTO mma VALUES(3, "16ozGloves", 10, 40);
+INSERT INTO mma VALUES(4, "mma_gloves", 15, 35);
+INSERT INTO mma VALUES(5, "hand_wraps", 20, 15);
+INSERT INTO mma VALUES(6, "pink hand_wraps", 5, 15);
+INSERT INTO mma VALUES(7, "black hand_wraps",5, 15);
+INSERT INTO mma VALUES(8, "shin guards", 10, 60);
+INSERT INTO mma VALUES(9, "mma shorts", 15, 35);
+INSERT INTO mma VALUES(10, "T Shirt", 12, 26);
+INSERT INTO mma VALUES(11, "Mouth Piece", 10, 15);
+INSERT INTO mma VALUES(12, "Head Piece", 10, 80);
+INSERT INTO mma VALUES(13, "Head Piece w/Nose protection", 10, 70);
+INSERT INTO mma VALUES(14, "ankle wraps", 13, 15);
+INSERT INTO mma VALUES(15, "healing balm", 4, 39);
+
+#Selecting from MMA table from highest to lowest(Descending Order)
+SELECT *FROM mma ORDER BY price DESC;
