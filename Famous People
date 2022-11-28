@@ -1,0 +1,90 @@
+/* I am going to make your own table with some small set of “famous people”, then make more tables about things 
+they do and join those to create nice human readable lists. */
+
+/* Create table about the people and what they do here */
+CREATE TABLE famous_people(id INTEGER PRIMARY KEY,
+    first_name TEXT,
+    last_name TEXT);
+    
+    INSERT INTO famous_people(first_name, last_name)
+            VALUES("Dwayne","Johnson");
+    INSERT INTO famous_people(first_name, last_name)
+            VALUES("Katy", "Perry");
+    INSERT INTO famous_people(first_name, last_name)
+            VALUES("Kanye", "West");
+    INSERT INTO famous_people(first_name, last_name)
+            VALUES("Kevin", "Heart");
+    INSERT INTO famous_people(first_name, last_name)
+            VALUES("Tom", "Brady");
+    INSERT INTO famous_people(first_name, last_name)
+            VALUES("Stephen", "Curry");
+    
+    CREATE TABLE hobbies(id INTEGER PRIMARY KEY AUTOINCREMENT,
+    person_id INTEGER,
+    hobby_name TEXT);
+
+    INSERT INTO hobbies (person_id, hobby_name)
+        VALUES(1,"acting");
+    INSERT INTO hobbies (person_id, hobby_name)
+        VALUES(1,"wrestling"); 
+    INSERT INTO hobbies (person_id, hobby_name)
+        VALUES(2, "Singer");
+    INSERT INTO hobbies (person_id, hobby_name)
+        VALUES(2,"crochet");
+    INSERT INTO hobbies (person_id, hobby_name)
+        VALUES(2,"acting");
+    INSERT INTO hobbies (person_id, hobby_name)
+        VALUES(3,"rapper");
+    INSERT INTO hobbies (person_id, hobby_name)
+        VALUES(3,"producer");
+    INSERT INTO hobbies (person_id, hobby_name)
+        VALUES(4,"comedian");
+    INSERT INTO hobbies (person_id, hobby_name)
+        VALUES(4,"actor"); 
+    INSERT INTO hobbies (person_id, hobby_name)
+        VALUES(5,"footbal star");
+    INSERT INTO hobbies (person_id, hobby_name)
+        VALUES(5,"golfer"); 
+    INSERT INTO hobbies (person_id, hobby_name)
+        VALUES(6,"basketball star"); 
+    INSERT INTO hobbies (person_id, hobby_name)
+        VALUES(6,"golfer");
+        
+    CREATE TABLE famous_for(id INTEGER PRIMARY KEY AUTOINCREMENT,
+            number INTEGER,
+            what_they_do TEXT);
+            
+            
+    INSERT INTO famous_for(number, what_they_do)
+        VALUES(1, "Fast and Furious(movie)");
+    INSERT INTO famous_for(number, what_they_do)
+        VALUES(1, "WWE(entertainment)");
+    INSERT INTO famous_for(number, what_they_do)
+        VALUES(2, "Fireworks(song)");
+    INSERT INTO famous_for(number, what_they_do)
+        VALUES(2, "The Smurfs(movie)");
+    INSERT INTO famous_for(number, what_they_do)
+        VALUES(3, "Through the Wire(song)");
+    INSERT INTO famous_for(number, what_they_do)
+        VALUES(3, "Yeezy(shoes)");
+    INSERT INTO famous_for(number, what_they_do)
+        VALUES(4, "Comedy acts");
+    INSERT INTO famous_for(number, what_they_do)
+        VALUES(4, "Jumanji(movie)");
+    INSERT INTO famous_for(number, what_they_do)
+        VALUES(5, "Patriots Football");
+    INSERT INTO famous_for(number, what_they_do)
+        VALUES(5, "Tampa Bay Buccs");
+    INSERT INTO famous_for(number, what_they_do)
+        VALUES(6, "Golden State Warriors(basketball)");
+        
+    SELECT first_name,last_name, hobby_name AS Hobby
+    FROM famous_people
+    JOIN hobbies 
+    ON famous_people.id = hobbies.person_id;
+    
+    SELECT first_name, Last_name, what_they_do
+    FROM famous_people
+    JOIN famous_for
+    ON famous_people.id = famous_for.number;
+    
