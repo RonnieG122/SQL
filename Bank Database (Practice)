@@ -1,3 +1,4 @@
+SCHEMA BELOW
 -- Bank Databse 
 
 CREATE TABLE bank_products (
@@ -26,7 +27,8 @@ VALUES
     (13, 'Youth Savings Account', 'Savings', 0.50, 0.00, 10.00),
     (14, 'Rewards Credit Card', 'Credit Card', 21.99, 0.00, 0.00),
     (15, 'Auto Loan', 'Loan', 4.25, 0.00, 20000.00);
-
+--------------------------------------------------------------------
+QUERY SQL BELOW
 --Select all the bank product names so we know what our options are.
 SELECT product_name
 FROM bank_products;
