@@ -1,3 +1,5 @@
+-SCHEMA BELOW
+
 -- A database custom built by Charlotte Chaze <3 
 -- Many teachers are leaving their jobs and getting hired as data analysts at EdTech companies. This database contains information that an EdTech company like McGraw-Hill would have. 
 -- This example data is fabricated for demonstration purposes.
@@ -126,6 +128,8 @@ INSERT INTO AuthorTextbookLink (AuthorID, TextbookID) VALUES
 (21,21),
 (22,22);
 
+--------------------------------------------------------------------
+-QUERY SQL BELOW
 
 -- We're going to work on finding this answer in 3 parts:
 
