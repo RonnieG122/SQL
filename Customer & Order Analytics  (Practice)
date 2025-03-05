@@ -45,6 +45,20 @@ FROM BIT_DB.FebSales Feb
 LEFT JOIN BIT_DB.customers cust
 ON FEB.orderid = cust.order_id 
 WHERE Feb.Quantity > 2;
+----One thing you may have noticed in example #3 above is the use of:
+-- like '02/18/19%'
+-- in the WHERE clause.
+
+-- 'like' searches the column you give it for the values you type in after like.
+-- '%' tells the SQL code that you are searching for a value that can match anything.
+-- So in our example, when we say:
+
+SELECT sum(quantity)
+FROM BIT_DB.FebSales 
+WHERE orderdate like '02/18/19%';
+
+-- We're telling the SQL to only select orderdate when it starts with 02/18/19, but then anything can come after that.
+
 
 --example by dates: These are the order date and times between midnight to midnight
 SELECT orderdate FROM BIT_DB.FebSales
